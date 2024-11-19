@@ -6,6 +6,8 @@ on:
     paths:
       - '.github/workflows/operate-*'
       - 'operate/**'
+  pull_request:
+
 jobs:
   run-migration-tests:
     uses: ./.github/workflows/operate-run-tests.yml
