@@ -168,7 +168,7 @@
             <configuration>
               <skipNativeTests>${skipNativeTests}</skipNativeTests>
               <mainClass>io.camunda.zeebe.zbctl.Application</mainClass>
-              <imageName>${build.finalName}</imageName>
+              <imageName>zbctl</imageName>
               <metadataRepository>
                 <enabled>true</enabled>
               </metadataRepository>
@@ -202,8 +202,8 @@
               <arguments>
                 <argument>-9</argument>
                 <argument>-o</argument>
+                <argument>${project.build.directory}/zbctl-upx</argument>
                 <argument>${project.build.directory}/zbctl</argument>
-                <argument>${project.build.directory}/${build.finalName}</argument>
               </arguments>
             </configuration>
             <executions>
